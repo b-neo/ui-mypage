@@ -7,16 +7,19 @@ section {
 	width: 100%;
 	height: 100%;
 }
+body {
+	width: 500px;
+}
+
 .bg {
 	position: absolute;
 	z-index: -1;
-	width: 100%;
-	height: 30%;
-	transform: scale(1.4) translate(100px, -100px) rotate(0.02turn);
+	width: 500px;
 }
 
 .navigator {
-	width: 100%;
+	width: 500px;
+	position: fixed;
 	display: flex;
 	justify-content: space-between;
 }
@@ -26,29 +29,33 @@ section {
 	background: transparent;
 	font-size: 40px;
 	border: 0;
+	color: rgb(234, 228, 255);
 }
 
 .profile {
-	width: 80%;
-	height: 30%;
+	width: 380px;
+	height: 28vh;
 	display: flex;
 	background: white;
 	flex-direction: column;
+	align-items: center;
 	justify-content: space-between;
-	margin-top: 80px;
+	margin-top: 90px;
 	box-shadow: 0 5px 20px -8px rgba(128, 128, 128, 0.445);
-	border-radius: 5%;
+	border-radius: 20px;
 }
 .profileImg img {
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	position: relative;
-	top: -30px;
+	top: -50px;
 	border-radius: 50%;
 }
 
 .profileIntro {
 	display: flex;
+	position: relative;
+	top: -40px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -56,47 +63,53 @@ section {
 .profileIntro .name {
 	font-weight: 900;
 	font-size: 20px;
-	margin-bottom: 15px;
+	margin-bottom: 12px;
 }
 .profileIntro .desc {
-	width: 80%;
+	width: 100%;
 	text-align: center;
 	line-height: 140%;
 }
 
 .profileBtn {
 	display: flex;
-
 	width: 100%;
+	position: relative;
+	top: -40px;
+	margin-top: 20px;
 }
-.profileBtn button {
-	height: 50px;
-	margin: 25px;
+.profileBtn button,
+.profileBtn img {
+	height: 40px;
 	background: transparent;
-	font-size: 25px;
 	border: 0;
 	border-radius: 12px;
 }
-.profileBtn button:first-child {
+.profileBtn button {
 	width: 100%;
-	margin-right: 5px;
-	background: rgba(0, 0, 255, 0.842);
+	margin-left: 20px;
+	margin-right: 10px;
+	font-size: 20px;
+	background: rgb(16, 167, 236);
 	color: white;
 }
-.profileBtn button:nth-child(2) {
-	font-size: 40px;
+.profileBtn img {
+	transform: scale(1.2);
+	margin-right: 10px;
 }
 
 .contents {
-	width: 80%;
-	height: 100%;
+	width: 500px;
+	height: 60vh;
 	display: flex;
 	flex-direction: row;
-	margin-top: 50px;
+	justify-content: center;
+	margin-top: 20px;
 }
 
 .status {
-	width: 40%;
+	width: 100px;
+	height: 55vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -104,37 +117,42 @@ section {
 	border-radius: 20px;
 }
 .status .status__box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	text-align: center;
-	width: 80%;
+	width: 80px;
+	height: 100px;
 	border-bottom: 1px rgba(128, 128, 128, 0.226) solid;
-	padding-bottom: 40%;
 }
 .status .status__box:last-child {
-	padding-bottom: 0;
 	border-bottom: 0;
 }
 .status .status__box .status__number {
 	font-weight: 900;
-	font-size: 38px;
+	font-size: 20px;
 	margin-bottom: 10px;
 }
 
 .feed {
+	height: 55vh;
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	margin-left: 20px;
-	height: 100%;
+	margin-top: 10px;
 }
 
 .friends__title {
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: bold;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
+	margin-left: 10px;
 }
 .friends__list {
 	display: flex;
 	flex-flow: row;
-	width: 400px;
+	width: 350px;
 	overflow-x: auto;
 	scrollbar-width: none;
 }
@@ -142,42 +160,41 @@ section {
 	display: none;
 }
 .friends__list .friendImg {
-	width: 80px;
-	margin: 0 20px;
+	width: 75px;
+	margin: 0 15px;
 }
 .friends__list .friendImg:first-child {
 	margin-left: 0;
 }
 
 .gallery {
-	display: flex;
-	flex-direction: column;
 	margin-top: 20px;
 	width: 100%;
 	height: 100%;
+	overflow-y: hidden;
 }
 .gallery__title {
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: bold;
 	margin-bottom: 10px;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 .gallery__list {
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	overflow-y: auto;
 	scrollbar-width: none;
-	height: 100%;
 }
 .gallery__list::-webkit-scrollbar {
 	display: none;
 }
 .galleryImg {
-	width: 180px;
-	height: 180px;
-	margin-right: 10px;
-	margin-bottom: 10px;
+	width: 150px;
+	height: 150px;
+	margin-right: 20px;
+	margin-bottom: 20px;
 }
 .galleryImg:first-child {
 	border-top-left-radius: 30px;
